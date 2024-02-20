@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #1F1F1F;
+    width: 100%;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+label.required:after {
+    content: " *";
+    color: red;
+}

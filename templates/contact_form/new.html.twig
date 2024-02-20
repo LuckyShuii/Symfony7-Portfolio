@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contactez moi{% endblock %}
+
+{% block importmap %}{{ importmap('contact') }}{% endblock %}
+
+{% block body %}
+<main class="main">
+    <section class="left">
+        <div class="container top-left">
+            <h1 class="h1-contact">N'hésitez pas à me <span class="blue-text">contacter</span></h1>
+            <p>Architecte du web, je transforme des lignes de code en expériences mémorables. Pas seulement un développeur, mais un créateur d'empreintes numériques. Contactez-moi pour donner vie à vos idées.</p>
+        </div>
+        <div class="container bottom-left">
+            <h2 class="h2-contact">Je reste à votre disposition</h2>
+            <ul>
+                <li><img src="{{ asset('images/phone.svg') }}" alt="icon d'un téléphone" class="img-contact"> 07 79 99 23 33</li>
+                <li><img src="{{ asset('images/mail.svg') }}" alt="icon d'une enveloppe" class="img-contact"> lucasnimes30000@gmail.com</li>
+                <li><a href="https://www.linkedin.com/in/lucas-boillot"><img src="{{ asset('images/linkedin.svg') }}" alt="icon de linkedin" class="img-contact"> linkedin.com/in/lucas-boillot</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="right form-contact">
+        {{ include('contact_form/_form.html.twig') }}
+    </section>
+</main>
+{% endblock %}
