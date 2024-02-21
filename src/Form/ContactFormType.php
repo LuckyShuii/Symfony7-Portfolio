@@ -27,7 +27,6 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Prénom',
                 'attr' => [
-                    'placeholder' => 'John',
                     'class' => 'form-firstname form-input js-input'
                 ]
             ])
@@ -40,7 +39,6 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Nom',
                 'attr' => [
-                    'placeholder' => 'Doe',
                     'class' => 'form-lastname form-input js-input'
                 ]
             ])
@@ -53,7 +51,6 @@ class ContactFormType extends AbstractType
                 'required' => true,
                 'label' => 'Adresse email',
                 'attr' => [
-                    'placeholder' => 'john@doe.com',
                     'class' => 'form-email form-input js-input'
                 ]
 
@@ -62,7 +59,6 @@ class ContactFormType extends AbstractType
                 'required' => false,
                 'label' => 'Numéro de téléphone',
                 'attr' => [
-                    'placeholder' => '06 12 34 56 78',
                     'class' => 'form-phone form-input js-input'
                 ],
             ])
@@ -92,7 +88,6 @@ class ContactFormType extends AbstractType
                 'attr' => [
                     'rows' => 10,
                     'cols' => 50,
-                    'placeholder' => 'Votre message ici...',
                     'class' => 'form-message js-input'
                 ],
                 'label' => 'Votre message',

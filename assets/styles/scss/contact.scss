@@ -1,12 +1,14 @@
 .container {
     border-radius: 25px;
     background-color: white;
-    padding: 2rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
+
+    p {
+        font-size: 18px;
+    }
 
     .blue-text {
         color : #448BEF;
@@ -19,6 +21,7 @@
             margin: 1rem 0;
             display: flex;
             align-items: center;
+            font-size: 18px;
             img {
                 margin-right: 1rem;
                 width: 30px;
@@ -31,23 +34,44 @@
     }
 }
 
+label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .left {
-    margin-right: 4rem;
+    width: 40%;
+    max-width: 548px;
+}
+
+.right {
+    width: calc(695px + 58px);
 }
 
 .left, .right {
-    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.form-contact {
-    margin-left: 3rem;
 }
 
 .bottom-left {
-    margin-top: 2rem
+    margin-top: 2rem;
+    padding: 2rem 2rem;
+}
+
+.bottom {
+    margin-top: 25px;
+}
+
+.top-left {
+    padding: 2rem 2rem;
+}
+
+.h1-contact {
+    font-size: 35px;
+}
+
+.h2-contact {
+    font-size: 25px;
 }
 
 .h1-contact, .h2-contact {
@@ -96,17 +120,18 @@
 }
 
 main {
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: start;
-    max-width: 65rem;
+    justify-content: center;
 
     form {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        width: 526px;
+        margin-left: 58px;
+        padding: 49px 85px;
 
         .container-checkbox {
             .checkbox-label {
@@ -161,13 +186,14 @@ main {
             align-items: center;
 
             input {
-                margin: 0.5rem 0;
+                margin-bottom: 0.5rem;
                 border: none;
                 border-bottom: 1px solid black;
                 font-size: 0.8rem;
                 outline: none;
-                padding: 10px;
-                width: 10rem;
+                padding: 0;
+                width: 230px;
+                height: 44px;
             }
         }
 
@@ -175,6 +201,7 @@ main {
             display: flex;
             flex-direction: column;
             width: 100%;
+            margin-top: 25px;
 
             select {
                 border: 1px solid black;
@@ -205,65 +232,7 @@ main {
                 padding: 1rem 10px;
                 width: 96%;
                 resize: none;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1110px) {
-    main {
-        flex-direction: column-reverse;
-        align-items: center;
-    }
-
-    .left, .right {
-        width: 80%;
-        margin: 0;
-    }
-
-    .form-contact {
-        margin: 2rem 0; 
-        width: 80%;
-        form {
-            .row-left {
-                display: flex;
-                flex-direction: column;
-                align-items: start;
-            }
-
-            .row {
-                width: 100%;
-                .form-group {
-                    width: 80%;
-                    input {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 705px) {
-    main {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 565px){
-    form {
-        .top-row {
-            flex-direction: column;
-        }
-    }
-
-    .row {
-        display: flex;
-        align-items: start;
-        .form-group {
-            width: 100% !important;
-            input {
-                width: calc(100% - 20px) !important;
+                height: 180px;
             }
         }
     }
@@ -284,5 +253,82 @@ main {
     
     40%, 60% {
         transform: translate3d(4px, 0, 0);
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .right {
+            display: flex;
+            align-items: center;
+            form {
+                margin-left: 0;
+                margin-bottom: 58px;
+            }
+        }
+
+        .left {
+            width: calc(695px + 58px);
+            display: flex;
+            align-items: center;
+            .top-left, .bottom-left {
+                width: calc(696px - 4rem);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+    main {
+        .right {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            form {
+                margin-left: 0;
+                margin-bottom: 58px;
+                padding: 2rem 2rem;
+                width: 100%;
+
+                .form-solo {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                .top-row {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    width: 100%;
+
+                    .row {
+                        width: 100%;
+                        .form-group {
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+
+                            .form-input {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .left {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            .top-left, .bottom-left {
+                width: 100%;
+            }
+        }
     }
 }

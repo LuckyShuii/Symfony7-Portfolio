@@ -10,17 +10,13 @@ a {
 body {
     display: flex;
     justify-content: center;
+    background-color: #1F1F1F;
 }
 
 main {
-    margin: 3rem 0;
+    margin: 3rem 70px;
     display: flex;
     justify-content: center;
-}
-
-body {
-    background-color: #1F1F1F;
-    width: 100%;
 }
 
 * {

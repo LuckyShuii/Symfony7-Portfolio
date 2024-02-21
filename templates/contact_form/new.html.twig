@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Contactez moi{% endblock %}
+{% block title %}{{ parent() }} - Contactez moi{% endblock %}
 
 {% block importmap %}{{ importmap('contact') }}{% endblock %}
 
@@ -9,7 +9,8 @@
     <section class="left">
         <div class="container top-left">
             <h1 class="h1-contact">N'hésitez pas à me <span class="blue-text">contacter</span></h1>
-            <p>Architecte du web, je transforme des lignes de code en expériences mémorables. Pas seulement un développeur, mais un créateur d'empreintes numériques. Contactez-moi pour donner vie à vos idées.</p>
+            <p>Architecte du web, je transforme des lignes de code en expériences mémorables. Pas seulement un développeur, mais un créateur d'empreintes numériques.</p>
+            <p>Contactez-moi pour donner vie à vos idées.</p>
         </div>
         <div class="container bottom-left">
             <h2 class="h2-contact">Je reste à votre disposition</h2>
