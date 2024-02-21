@@ -71,6 +71,8 @@ btn_submit.addEventListener("click", (event) => {
                 if (element.checked === false) {
                     label_mod.style.color = "#Ec1d1d";
                     check_form.push("unchecked");
+                    shakeAnimation(element)
+                    shakeAnimation(label_mod)
                 } else if (element.checked === true) {
                     label_mod.style.color = "var(--our-black)";
                 }
