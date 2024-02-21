@@ -259,7 +259,7 @@ main {
 @media screen and (max-width: 1370px) {
     main {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
 
         .right {
@@ -272,6 +272,7 @@ main {
         }
 
         .left {
+            margin-bottom: 2.2rem;
             width: calc(695px + 58px);
             display: flex;
             align-items: center;
