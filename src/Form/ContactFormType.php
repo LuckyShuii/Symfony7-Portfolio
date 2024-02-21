@@ -28,7 +28,7 @@ class ContactFormType extends AbstractType
                 'label' => 'Prénom',
                 'attr' => [
                     'placeholder' => 'John',
-                    'class' => 'form-firstname form-input'
+                    'class' => 'form-firstname form-input js-input'
                 ]
             ])
             ->add('lastname', TextType::class, [
@@ -41,7 +41,7 @@ class ContactFormType extends AbstractType
                 'label' => 'Nom',
                 'attr' => [
                     'placeholder' => 'Doe',
-                    'class' => 'form-lastname form-input'
+                    'class' => 'form-lastname form-input js-input'
                 ]
             ])
             ->add('email', EmailType::class, [
@@ -54,7 +54,7 @@ class ContactFormType extends AbstractType
                 'label' => 'Adresse email',
                 'attr' => [
                     'placeholder' => 'john@doe.com',
-                    'class' => 'form-email form-input'
+                    'class' => 'form-email form-input js-input'
                 ]
 
             ])
@@ -63,7 +63,7 @@ class ContactFormType extends AbstractType
                 'label' => 'Numéro de téléphone',
                 'attr' => [
                     'placeholder' => '06 12 34 56 78',
-                    'class' => 'form-phone form-input'
+                    'class' => 'form-phone form-input js-input'
                 ],
             ])
             ->add('topic', ChoiceType::class, [
@@ -75,6 +75,9 @@ class ContactFormType extends AbstractType
                     'Autre' => 'Autre'
                 ],
                 'label' => 'Sujet de votre message',
+                'attr' => [
+                    'class' => 'js-input',
+                ],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Veuillez choisir un sujet'
@@ -90,7 +93,7 @@ class ContactFormType extends AbstractType
                     'rows' => 10,
                     'cols' => 50,
                     'placeholder' => 'Votre message ici...',
-                    'class' => 'form-message'
+                    'class' => 'form-message js-input'
                 ],
                 'label' => 'Votre message',
                 'constraints' => [
@@ -101,9 +104,12 @@ class ContactFormType extends AbstractType
             ])
             ->add('terms', CheckboxType::class, [
                 'label' => 'J\'accepte que mes données soient utilisées pour me recontacter',
+                'label_attr' => [
+                    'class' => 'labelMod'
+                ],
                 'required' => true,
                 'attr' => [
-                    'class' => 'form-checkbox'
+                    'class' => 'form-checkbox js-input'
                 ]
             ]);
     }

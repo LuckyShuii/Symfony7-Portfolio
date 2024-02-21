@@ -44,9 +44,9 @@
         {{ form_label(form.message) }}
         <div class="select">
             {{ form_widget(form.message) }}
-        </div>
-        <div class="errors-w">
-            {{ form_errors(form.message) }}
+            <div class="errors-w">
+                {{ form_errors(form.message) }}
+            </div>
         </div>
     </div>
     <div class="container-checkbox">
@@ -59,7 +59,7 @@
         </div>
     </div>
     <div class="container-button">
-        <button class="btn">{{ button_label|default('Envoyer') }}</button>
+        <button id="btn_submit" class="btn">{{ button_label|default('Envoyer') }}</button>
     </div>
     {% for message in app.flashes('success') %}
         <div class="alert-success">

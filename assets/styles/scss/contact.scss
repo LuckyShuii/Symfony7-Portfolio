@@ -58,8 +58,9 @@
 .errors {
     color: red;
     font-size: 0.7rem;
-    margin: 0.5rem 0;
-    width: 10rem;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
+    width: 100%;
 
     ul {
         padding: 0.5px 0;
@@ -70,7 +71,8 @@
 .errors-w {
     color: red;
     font-size: 0.7rem;
-    margin: 0.5rem 0;
+    margin-bottom: 1rem;
+    margin-top: -0.5rem;
     width: 100%;
 
     ul {
@@ -264,5 +266,23 @@ main {
                 width: calc(100% - 20px) !important;
             }
         }
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+    
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+    
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
     }
 }
