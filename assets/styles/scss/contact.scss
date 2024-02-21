@@ -256,7 +256,7 @@ main {
     }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1370px) {
     main {
         display: flex;
         flex-direction: column-reverse;
@@ -282,17 +282,17 @@ main {
     }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 805px) {
     main {
         .right {
-            width: 90%;
+            width: 612px;
             display: flex;
             align-items: center;
             form {
                 margin-left: 0;
                 margin-bottom: 58px;
                 padding: 2rem 2rem;
-                width: 100%;
+                width: 90%;
 
                 .form-solo {
                     display: flex;
@@ -328,6 +328,19 @@ main {
             align-items: center;
             .top-left, .bottom-left {
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        .right {
+            width: 90%;
+        }
+        .left {
+            .top-left, .bottom-left {
+                width: 90%;
             }
         }
     }

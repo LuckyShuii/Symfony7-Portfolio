@@ -8,15 +8,13 @@ a {
 }
 
 body {
-    display: flex;
-    justify-content: center;
     background-color: #1F1F1F;
 }
 
 main {
-    margin: 3rem 70px;
-    display: flex;
+    display: flex;;
     justify-content: center;
+    width: 100%;
 }
 
 * {
