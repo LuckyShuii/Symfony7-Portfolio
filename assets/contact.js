@@ -5,8 +5,6 @@ let inputs = document.querySelectorAll(".js-input")
 let label_mod = document.querySelector(".labelMod")
 let check_form = []
 
-console.log("contact.js")
-
 btn_submit.addEventListener("click", (event) => {
     /**
      * On vide le tableau check_form à chaque fois que l'on clique sur le bouton
