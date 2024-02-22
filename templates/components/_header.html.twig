@@ -1,14 +1,14 @@
 <header id="header">
     <div class="logo-container">
-        <a id="aHeaderLogo" href="index.php">
+        <a id="aHeaderLogo" href="{{ path('app_home') }}">
             <img id="logo_header" src="{{ asset('images/logo.svg') }}" alt="logo">
         </a>
     </div>
     <nav>
         <ul class="list_nav_header">
-            <li class="main-nav"><a href="#">ACCUEIL</a></li>
-            <li class="main-nav"><a href="#">À PROPOS</a></li>
+            <li class="main-nav"><a href="{{ path('app_home') }}">ACCUEIL</a></li>
             <li class="main-nav"><a href="#">PROJETS</a></li>
+            <li class="cv-nav main-nav"><a href="{{ asset('download/cv/LUCAS_RESUME.pdf') }}" download>MON CV <img class="dl-icon" src="{{ asset('images/download.svg') }}" alt="icône de téléchargement" /></a></li>
             <li class="main-nav"><a href="{{ path('app_contact_form_index') }}">CONTACT</a></li>
             <div class="icon-list-nav">
                 <li><a href="https://github.com/LuckyShuii" target="_blank"><img class="icons-nav" src="{{ asset('images/github.svg') }}" alt="github icone" /></a></li>
@@ -30,9 +30,9 @@
 <nav class="wrap">
     <div id="menu-mainmenu">
         <ul class="nav">
-            <li><a href="#">ACCUEIL</a></li>
-            <li><a href="#">À PROPOS</a></li>
+            <li><a href="{{ path('app_home') }}">ACCUEIL</a></li>
             <li><a href="#">PROJETS</a></li>
+            <li><a href="#">MON CV</a></li>
             <li><a  class="rounded-li" href="{{ path('app_contact_form_index') }}">CONTACT</a></li>
         </ul>
     </div>

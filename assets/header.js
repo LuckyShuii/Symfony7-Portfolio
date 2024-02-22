@@ -20,7 +20,7 @@ function toggleMenuClickHandler(evt) {
 
 // Check if the window size is changing, called in onload()
 function mediaQueryChecker() {
-    let myMedia = window.matchMedia("(min-width: 806px)")
+    let myMedia = window.matchMedia("(min-width: 820px)")
 
     myMediaQuerry(myMedia)
 

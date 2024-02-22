@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ProjectTag index{% endblock %}
+
+{% block body %}
+    <h1>ProjectTag index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Main</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for project_tag in project_tags %}
+            <tr>
+                <td>{{ project_tag.id }}</td>
+                <td>{{ project_tag.main ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_project_tag_show', {'id': project_tag.id}) }}">show</a>
+                    <a href="{{ path('app_project_tag_edit', {'id': project_tag.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_project_tag_new') }}">Create new</a>
+{% endblock %}

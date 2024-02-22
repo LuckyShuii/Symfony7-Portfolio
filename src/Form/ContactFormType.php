@@ -24,7 +24,6 @@ class ContactFormType extends AbstractType
                         'message' => 'Veuillez entrer un prénom'
                     ])
                 ],
-                'required' => true,
                 'label' => 'Prénom',
                 'attr' => [
                     'class' => 'form-firstname form-input js-input'
@@ -36,7 +35,6 @@ class ContactFormType extends AbstractType
                         'message' => 'Veuillez entrer un nom'
                     ])
                 ],
-                'required' => true,
                 'label' => 'Nom',
                 'attr' => [
                     'class' => 'form-lastname form-input js-input'
@@ -48,7 +46,6 @@ class ContactFormType extends AbstractType
                         'message' => 'Veuillez entrer une adresse email'
                     ])
                 ],
-                'required' => true,
                 'label' => 'Adresse email',
                 'attr' => [
                     'class' => 'form-email form-input js-input'
@@ -79,7 +76,6 @@ class ContactFormType extends AbstractType
                         'message' => 'Veuillez choisir un sujet'
                     ])
                 ],
-                'required' => true,
                 'attr' => [
                     'class' => 'form-topic'
                 ]
@@ -102,7 +98,6 @@ class ContactFormType extends AbstractType
                 'label_attr' => [
                     'class' => 'labelMod'
                 ],
-                'required' => true,
                 'attr' => [
                     'class' => 'form-checkbox js-input'
                 ]

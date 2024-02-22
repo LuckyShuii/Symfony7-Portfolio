@@ -23,7 +23,7 @@ class Project
     private ?string $description = null;
 
     #[ORM\Column(nullable: true)]
-    private ?array $images = null;
+    private ?string $images = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $github = null;
@@ -33,6 +33,15 @@ class Project
 
     #[ORM\OneToMany(targetEntity: ProjectTag::class, mappedBy: 'project')]
     private Collection $projectTags;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $goal = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $why = null;
+
+    #[ORM\Column(type: Types::TEXT)]
+    private ?string $more = null;
 
     public function __construct()
     {
@@ -68,12 +77,12 @@ class Project
         return $this;
     }
 
-    public function getImages(): ?array
+    public function getImages(): ?string
     {
         return $this->images;
     }
 
-    public function setImages(?array $images): static
+    public function setImages(?string $images): static
     {
         $this->images = $images;
 
@@ -130,6 +139,42 @@ class Project
                 $projectTag->setProject(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getGoal(): ?string
+    {
+        return $this->goal;
+    }
+
+    public function setGoal(string $goal): static
+    {
+        $this->goal = $goal;
+
+        return $this;
+    }
+
+    public function getWhy(): ?string
+    {
+        return $this->why;
+    }
+
+    public function setWhy(string $why): static
+    {
+        $this->why = $why;
+
+        return $this;
+    }
+
+    public function getMore(): ?string
+    {
+        return $this->more;
+    }
+
+    public function setMore(string $more): static
+    {
+        $this->more = $more;
 
         return $this;
     }

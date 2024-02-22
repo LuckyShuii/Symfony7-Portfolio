@@ -1,5 +1,7 @@
 a {
     text-decoration: none;
+    display: flex;
+    align-items: center;
     color: black;
     &:hover {
         cursor: pointer;
@@ -27,6 +29,7 @@ label.required:after {
     color: red;
 }
 
-svg path {
-    fill: white;
+.dl-icon {
+    width: 1.5rem;
+    margin-left: 0.5rem;
 }

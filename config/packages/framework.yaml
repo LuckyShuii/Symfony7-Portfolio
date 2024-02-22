@@ -1,5 +1,7 @@
 # see https://symfony.com/doc/current/reference/configuration/framework.html
 framework:
+    asset_mapper:
+        paths: ['assets/']
     secret: '%env(APP_SECRET)%'
     #csrf_protection: true
 
