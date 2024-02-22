@@ -2,7 +2,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 37px 70px;
+    padding: 37px 70px;
+    max-width: calc(140px + 1288px);
+    width: 100%;
 
     img {
         width: 100px;
@@ -86,14 +88,13 @@ header {
 
 @media screen and (max-width: 820px) {
     header {
-        padding: 2rem 0 0 0;
         display: flex;
         justify-content: flex-start;
         align-content: center;
         margin: 0 17px;
 
         #burger_icon {
-            right: 17px;
+            right: 70px;
         }
     }
 
@@ -116,7 +117,7 @@ header {
     }
 
     .nav {
-        position: fixed;
+        position: absolute;
         right: 100%;
         top: 0;
         bottom: 0;
@@ -125,7 +126,7 @@ header {
         width: 40%;
         min-width: 10rem;
         display: block;
-        margin: 9rem 17px 0 0;
+        margin: 6.5rem 10px 0 0;
         transition: all 0.6s ease;
         
         .rounded-li {
@@ -178,6 +179,17 @@ header {
     }
 
 }
+
+@media screen and (max-width: 670px) {
+    header {
+        padding: 37px 30px;
+    }
+
+    #burger_icon {
+        right: 30px !important;
+    }
+}
+
 .nav {
     list-style-type: none;
     clear: both;

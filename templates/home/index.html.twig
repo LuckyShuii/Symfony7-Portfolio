@@ -2,19 +2,44 @@
 
 {% block title %}Hello HomeController!{% endblock %}
 
+{% block importmap %}
+    {{ importmap('home') }}
+{% endblock %}
+
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/Users/lucasboillot/Public/www/lucasboillot/src/Controller/HomeController.php</code></li>
-        <li>Your template at <code>/Users/lucasboillot/Public/www/lucasboillot/templates/home/index.html.twig</code></li>
-    </ul>
-</div>
+    <main>
+        <section class="hero">
+            <div class="left">
+                <h1 class="name-title">LUCAS BOILLOT</h1>
+                <h2 class="job-title">DÉVELOPPEUR<br>FULL STACK SYMFONY</h2>
+                <img src="{{ asset('images/big-separation.svg') }}" alt="séparation bleue" class="big-separation">
+                <p>Bienvenue sur mon portfolio Symfony !
+                <br>
+                Je suis Lucas Boillot, un développeur Symfony passionné. 
+                <br>
+                Explorez mes projets et découvrez mon expertise en développement web.
+                <br>
+                Envie de travailler ensemble ? Contactez moi dès maintenant !
+                </p>
+                <a href="{{ path('app_contact_form_index') }}" class="contact-hero-btn">CONTACT</a>
+            </div>
+            <div class="right">
+                <img src="{{ asset('images/lucas-c-home.svg') }}" alt="photo de Lucas avec un cercle sur le côté bleu" class="hero-image">
+            </div>
+        </section>
+        <section class="second-section">
+            <div class="left">
+                <h2 class="about-title">À PROPOS</h2>
+                <img src="{{ asset('images/small-separation.svg') }}" alt="séparation bleue" class="small-separation">
+                <p class="about-p">Quelques lignes sur qui tu es et ce que tu recherches. Genre je suis sui dev symfony mais je veux monter en compétence donc je cherche une alternance pour ajouter des cordes à mon arc.</p>
+                <a class="second-btn" href="{{ asset('download/cv/LUCAS_RESUME.pdf') }}" download>MON CV <img class="dl-icon" src="{{ asset('images/download.svg') }}" alt="icône de téléchargement" /></a>
+            </div>
+            <div class="right">
+                <h2>PROJETS</h2>
+                <img src="{{ asset('images/small-separation.svg') }}" alt="séparation bleue" class="small-separation">
+                <p class="about-p">Je maitrise des technologies tant front que back, telles que : PHP, JavaScript, CSS/SCSS, Figma, etc.<br>N’hésitez pas à visiter mon GitHub pour en savoir plus !<br>Pour plus d’informations ne pas hésiter à cliquer pour atterir sur la page projets </p>
+                <a href="#" class="second-btn">VOIR PLUS</a>
+            </div>
+        </section>
+    </main>
 {% endblock %}

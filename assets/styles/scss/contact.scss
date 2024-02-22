@@ -34,6 +34,13 @@
     }
 }
 
+main {
+    display: flex;;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+
 label {
     font-size: 18px;
     font-weight: 600;
@@ -129,7 +136,7 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 526px;
+        width: 690px;
         margin-left: 58px;
         padding: 49px 85px;
 
@@ -160,11 +167,11 @@ main {
                 padding: 0.5rem 1rem;
                 cursor: pointer;
                 outline: none;
-                transition: 0.3s;
                 width: 10rem;
 
                 &:hover {
-                    background-color: #bed5f5;
+                    background-color: #2F5E9E;
+                    transition: 0.3s;
                 }
             }
         }
@@ -230,7 +237,7 @@ main {
                 font-size: 1rem;
                 outline: none;
                 padding: 1rem 10px;
-                width: 96%;
+                width: 100%;
                 resize: none;
                 height: 180px;
             }
@@ -256,7 +263,7 @@ main {
     }
 }
 
-@media screen and (max-width: 1370px) {
+@media screen and (max-width: 1432px) {
     main {
         display: flex;
         flex-direction: column;
@@ -277,7 +284,7 @@ main {
             display: flex;
             align-items: center;
             .top-left, .bottom-left {
-                width: calc(696px - 4rem);
+                width: 696px;
             }
         }
     }
@@ -285,15 +292,23 @@ main {
 
 @media screen and (max-width: 805px) {
     main {
+        margin-top: 0;
         .right {
-            width: 612px;
+            width: 100%;
             display: flex;
             align-items: center;
+            padding: 40px 15px 20px 15px;
             form {
                 margin-left: 0;
                 margin-bottom: 58px;
-                padding: 2rem 2rem;
-                width: 90%;
+                padding: 2rem 1.5rem;
+                width: 100%;
+                font-size: 14px;
+
+                input, textarea, select {
+                    font-size: 12px !important;
+                    padding: 0.5rem 0.8rem !important;
+                }
 
                 .form-solo {
                     display: flex;
@@ -324,25 +339,41 @@ main {
         }
 
         .left {
-            width: 90%;
+            width: 100%;
             display: flex;
             align-items: center;
+            max-width: 100%;
+            padding: 40px 15px 20px 15px;
+            margin-bottom: 0;
             .top-left, .bottom-left {
                 width: 100%;
+                padding: 2rem 1.5rem;
+
+                .h1-contact {
+                    font-size: 22px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    font-size: 12px;
+                }
+
+                .h2-contact {
+                    font-size: 18px;
+                }
+
+                ul {
+                    li {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     }
 }
 
-@media screen and (max-width: 700px) {
-    main {
-        .right {
-            width: 90%;
-        }
-        .left {
-            .top-left, .bottom-left {
-                width: 90%;
-            }
-        }
+@media screen and (max-width: 300px) {
+    .img-contact {
+        display: none;
     }
 }
